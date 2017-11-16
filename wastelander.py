@@ -174,8 +174,9 @@ class GameBoard:
 		''' Get move input from player, direction and number of steps '''
 		dirs = ['up', 'right', 'down', 'left']
 		dir = ''
-		while not dir.lower() in dirs: # make sure it is a valid direction
+		while not dir in dirs: # make sure it is a valid direction
 			dir = input('Choose a direction: ')
+			dir = dir.lower()
 			
 		while True:
 			try:
